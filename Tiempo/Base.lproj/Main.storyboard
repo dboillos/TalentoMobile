@@ -32,13 +32,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cma-G4-Sdy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="53"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iX6-M0-Tu1">
+                                        <rect key="frame" x="20" y="26" width="560" height="2"/>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iX6-M0-Tu1" firstAttribute="centerX" secondItem="Cma-G4-Sdy" secondAttribute="centerX" id="3Ez-iu-jrQ"/>
+                                    <constraint firstAttribute="height" constant="53" id="N4p-1A-hNK"/>
+                                    <constraint firstAttribute="trailing" secondItem="iX6-M0-Tu1" secondAttribute="trailing" constant="20" id="TO5-6y-5h0"/>
+                                    <constraint firstItem="iX6-M0-Tu1" firstAttribute="centerY" secondItem="Cma-G4-Sdy" secondAttribute="centerY" id="byy-71-EYI"/>
+                                    <constraint firstItem="iX6-M0-Tu1" firstAttribute="leading" secondItem="Cma-G4-Sdy" secondAttribute="leading" constant="20" id="rq9-ND-Sgs"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-IG-QiJ">
+                                <rect key="frame" x="0.0" y="116" width="600" height="484"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cjL-lF-U7D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0uX-0Q-f4H"/>
+                            <constraint firstItem="Qzm-IG-QiJ" firstAttribute="top" secondItem="cjL-lF-U7D" secondAttribute="bottom" constant="52" id="4UP-xk-bdO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cjL-lF-U7D" secondAttribute="bottom" constant="40" id="FkC-ee-LtR"/>
+                            <constraint firstAttribute="trailing" secondItem="Qzm-IG-QiJ" secondAttribute="trailing" id="J9g-Dc-hxS"/>
                             <constraint firstAttribute="trailing" secondItem="cjL-lF-U7D" secondAttribute="trailing" id="Kxo-Zd-e0s"/>
                             <constraint firstItem="cjL-lF-U7D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M0B-Tn-D0C"/>
+                            <constraint firstAttribute="trailing" secondItem="Cma-G4-Sdy" secondAttribute="trailing" id="VAU-yM-xfR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qzm-IG-QiJ" secondAttribute="bottom" id="VOQ-fu-CCO"/>
+                            <constraint firstItem="Cma-G4-Sdy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jmb-wI-qE1"/>
+                            <constraint firstItem="Cma-G4-Sdy" firstAttribute="top" secondItem="cjL-lF-U7D" secondAttribute="bottom" id="pci-SW-DmY"/>
+                            <constraint firstItem="Qzm-IG-QiJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v6q-BO-e9H"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -49,6 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="332" y="239"/>
         </scene>
         <!--Tabla Resultados Table View Controller-->
         <scene sceneID="IYW-tc-xbO">
@@ -67,7 +93,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.98335199750000002" green="1" blue="0.27672034429999998" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

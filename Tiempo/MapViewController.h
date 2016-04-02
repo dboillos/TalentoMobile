@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "TablaResultadosTableViewController.h"
+
+#define METERS_PER_MILE 1609.344
 
 @interface MapViewController : UIViewController
 
+    @property IBOutlet MKMapView *_mapView;
 
 @end
 
