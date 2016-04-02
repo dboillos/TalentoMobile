@@ -8,7 +8,7 @@
 
 #import "MapViewController.h"
 
-@interface MapViewController () <UISearchResultsUpdating>
+@interface MapViewController () 
 
     @property  UISearchController *barraBusqueda;
     @property  TablaResultadosTableViewController *tablaResultados;
@@ -45,21 +45,15 @@
         //preparo la llamada para mostrar la barra de busqueda y la tabla de resultados
         self.tablaResultados = (TablaResultadosTableViewController*)[[self storyboard] instantiateViewControllerWithIdentifier:@"TableSearchViewController"];
         self.barraBusqueda = [[UISearchController alloc] initWithSearchResultsController: self.tablaResultados];
-        self.barraBusqueda.searchResultsUpdater = self;
+        self.barraBusqueda.searchResultsUpdater = self.tablaResultados;
         self.barraBusqueda.hidesNavigationBarDuringPresentation = NO;
         self.barraBusqueda.dimsBackgroundDuringPresentation = NO;
         self.definesPresentationContext = YES;
-        //self.searchController.searchBar.scopeButtonTitles = @[@"Posts", @"Users", @"Subreddits"];
         [self presentViewController:self.barraBusqueda animated:YES completion:nil];
         
     }
 
-    //llamada cuando se escribe en la barra de busqueda
-    - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
-    {
-        printf("actualiza");
-        [self.tablaResultados.tableView reloadData];
-    }
+
 
 
 

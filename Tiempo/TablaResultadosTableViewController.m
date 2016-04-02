@@ -8,7 +8,7 @@
 
 #import "TablaResultadosTableViewController.h"
 
-@interface TablaResultadosTableViewController ()
+@interface TablaResultadosTableViewController () <UISearchResultsUpdating>
 
 @end
 
@@ -37,6 +37,15 @@
         cell.textLabel.text = @"Probando";
         
         return cell;
+    }
+
+#pragma mark - UISearchResultsUpdating
+
+    //llamada cuando se escribe en la barra de busqueda
+    - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+    {
+        printf("actualiza");
+        [self.tableView reloadData];
     }
 
 
