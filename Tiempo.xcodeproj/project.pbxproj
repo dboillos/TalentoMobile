@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBC91CAFD8AE009421E3 /* main.m */; };
 		F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */; };
-		F9F6FBD01CAFD8AE009421E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCF1CAFD8AE009421E3 /* ViewController.m */; };
+		F9F6FBD01CAFD8AE009421E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCF1CAFD8AE009421E3 /* MapViewController.m */; };
 		F9F6FBD31CAFD8AE009421E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6FBD11CAFD8AE009421E3 /* Main.storyboard */; };
 		F9F6FBD61CAFD8AE009421E3 /* Tiempo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBD41CAFD8AE009421E3 /* Tiempo.xcdatamodeld */; };
 		F9F6FBD81CAFD8AE009421E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */; };
 		F9F6FBDB1CAFD8AE009421E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6FBD91CAFD8AE009421E3 /* LaunchScreen.storyboard */; };
 		F9F6FBE61CAFD8AE009421E3 /* TiempoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBE51CAFD8AE009421E3 /* TiempoTests.m */; };
 		F9F6FBF11CAFD8AE009421E3 /* TiempoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBF01CAFD8AE009421E3 /* TiempoUITests.m */; };
+		F9F6FC001CAFE12C009421E3 /* TablaResultadosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBFF1CAFE12C009421E3 /* TablaResultadosTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,8 @@
 		F9F6FBC91CAFD8AE009421E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F9F6FBCE1CAFD8AE009421E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F9F6FBCF1CAFD8AE009421E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9F6FBCE1CAFD8AE009421E3 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		F9F6FBCF1CAFD8AE009421E3 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		F9F6FBD21CAFD8AE009421E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9F6FBD51CAFD8AE009421E3 /* Tiempo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tiempo.xcdatamodel; sourceTree = "<group>"; };
 		F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +54,8 @@
 		F9F6FBEC1CAFD8AE009421E3 /* TiempoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiempoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6FBF01CAFD8AE009421E3 /* TiempoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiempoUITests.m; sourceTree = "<group>"; };
 		F9F6FBF21CAFD8AE009421E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F6FBFE1CAFE12C009421E3 /* TablaResultadosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablaResultadosTableViewController.h; sourceTree = "<group>"; };
+		F9F6FBFF1CAFE12C009421E3 /* TablaResultadosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablaResultadosTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F9AAB6161CB0324F004B3644 /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBCE1CAFD8AE009421E3 /* MapViewController.h */,
+				F9F6FBCF1CAFD8AE009421E3 /* MapViewController.m */,
+				F9F6FBFE1CAFE12C009421E3 /* TablaResultadosTableViewController.h */,
+				F9F6FBFF1CAFE12C009421E3 /* TablaResultadosTableViewController.m */,
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
 		F9F6FBBC1CAFD8AE009421E3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +119,7 @@
 			children = (
 				F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */,
 				F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */,
-				F9F6FBCE1CAFD8AE009421E3 /* ViewController.h */,
-				F9F6FBCF1CAFD8AE009421E3 /* ViewController.m */,
+				F9AAB6161CB0324F004B3644 /* Controladores */,
 				F9F6FBD11CAFD8AE009421E3 /* Main.storyboard */,
 				F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */,
 				F9F6FBD91CAFD8AE009421E3 /* LaunchScreen.storyboard */,
@@ -273,9 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9F6FBD01CAFD8AE009421E3 /* ViewController.m in Sources */,
+				F9F6FBD01CAFD8AE009421E3 /* MapViewController.m in Sources */,
 				F9F6FBD61CAFD8AE009421E3 /* Tiempo.xcdatamodeld in Sources */,
 				F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */,
+				F9F6FC001CAFE12C009421E3 /* TablaResultadosTableViewController.m in Sources */,
 				F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +516,7 @@
 				F9F6FBF71CAFD8AE009421E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9F6FBF81CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "TiempoTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +525,7 @@
 				F9F6FBFA1CAFD8AE009421E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9F6FBFB1CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "TiempoUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +534,7 @@
 				F9F6FBFD1CAFD8AE009421E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

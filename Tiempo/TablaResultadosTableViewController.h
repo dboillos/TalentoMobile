@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TablaResultadosTableViewController.h
 //  Tiempo
 //
 //  Created by David Boillos on 2/4/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TablaResultadosTableViewController : UITableViewController
 
 @end
-
