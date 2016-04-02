@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBC91CAFD8AE009421E3 /* main.m */; };
+		F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */; };
+		F9F6FBD01CAFD8AE009421E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCF1CAFD8AE009421E3 /* ViewController.m */; };
+		F9F6FBD31CAFD8AE009421E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6FBD11CAFD8AE009421E3 /* Main.storyboard */; };
+		F9F6FBD61CAFD8AE009421E3 /* Tiempo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBD41CAFD8AE009421E3 /* Tiempo.xcdatamodeld */; };
+		F9F6FBD81CAFD8AE009421E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */; };
+		F9F6FBDB1CAFD8AE009421E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F6FBD91CAFD8AE009421E3 /* LaunchScreen.storyboard */; };
+		F9F6FBE61CAFD8AE009421E3 /* TiempoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBE51CAFD8AE009421E3 /* TiempoTests.m */; };
+		F9F6FBF11CAFD8AE009421E3 /* TiempoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBF01CAFD8AE009421E3 /* TiempoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9F6FBE21CAFD8AE009421E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9F6FBBD1CAFD8AE009421E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9F6FBC41CAFD8AE009421E3;
+			remoteInfo = Tiempo;
+		};
+		F9F6FBED1CAFD8AE009421E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9F6FBBD1CAFD8AE009421E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9F6FBC41CAFD8AE009421E3;
+			remoteInfo = Tiempo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9F6FBC51CAFD8AE009421E3 /* Tiempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F6FBC91CAFD8AE009421E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F9F6FBCE1CAFD8AE009421E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F9F6FBCF1CAFD8AE009421E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9F6FBD21CAFD8AE009421E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9F6FBD51CAFD8AE009421E3 /* Tiempo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tiempo.xcdatamodel; sourceTree = "<group>"; };
+		F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9F6FBDA1CAFD8AE009421E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9F6FBDC1CAFD8AE009421E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F6FBE11CAFD8AE009421E3 /* TiempoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiempoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F6FBE51CAFD8AE009421E3 /* TiempoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiempoTests.m; sourceTree = "<group>"; };
+		F9F6FBE71CAFD8AE009421E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9F6FBEC1CAFD8AE009421E3 /* TiempoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiempoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F6FBF01CAFD8AE009421E3 /* TiempoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TiempoUITests.m; sourceTree = "<group>"; };
+		F9F6FBF21CAFD8AE009421E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9F6FBC21CAFD8AE009421E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F6FBDE1CAFD8AE009421E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F6FBE91CAFD8AE009421E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9F6FBBC1CAFD8AE009421E3 = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBC71CAFD8AE009421E3 /* Tiempo */,
+				F9F6FBE41CAFD8AE009421E3 /* TiempoTests */,
+				F9F6FBEF1CAFD8AE009421E3 /* TiempoUITests */,
+				F9F6FBC61CAFD8AE009421E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9F6FBC61CAFD8AE009421E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBC51CAFD8AE009421E3 /* Tiempo.app */,
+				F9F6FBE11CAFD8AE009421E3 /* TiempoTests.xctest */,
+				F9F6FBEC1CAFD8AE009421E3 /* TiempoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9F6FBC71CAFD8AE009421E3 /* Tiempo */ = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */,
+				F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */,
+				F9F6FBCE1CAFD8AE009421E3 /* ViewController.h */,
+				F9F6FBCF1CAFD8AE009421E3 /* ViewController.m */,
+				F9F6FBD11CAFD8AE009421E3 /* Main.storyboard */,
+				F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */,
+				F9F6FBD91CAFD8AE009421E3 /* LaunchScreen.storyboard */,
+				F9F6FBDC1CAFD8AE009421E3 /* Info.plist */,
+				F9F6FBD41CAFD8AE009421E3 /* Tiempo.xcdatamodeld */,
+				F9F6FBC81CAFD8AE009421E3 /* Supporting Files */,
+			);
+			path = Tiempo;
+			sourceTree = "<group>";
+		};
+		F9F6FBC81CAFD8AE009421E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBC91CAFD8AE009421E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9F6FBE41CAFD8AE009421E3 /* TiempoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBE51CAFD8AE009421E3 /* TiempoTests.m */,
+				F9F6FBE71CAFD8AE009421E3 /* Info.plist */,
+			);
+			path = TiempoTests;
+			sourceTree = "<group>";
+		};
+		F9F6FBEF1CAFD8AE009421E3 /* TiempoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9F6FBF01CAFD8AE009421E3 /* TiempoUITests.m */,
+				F9F6FBF21CAFD8AE009421E3 /* Info.plist */,
+			);
+			path = TiempoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9F6FBC41CAFD8AE009421E3 /* Tiempo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F6FBF51CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "Tiempo" */;
+			buildPhases = (
+				F9F6FBC11CAFD8AE009421E3 /* Sources */,
+				F9F6FBC21CAFD8AE009421E3 /* Frameworks */,
+				F9F6FBC31CAFD8AE009421E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tiempo;
+			productName = Tiempo;
+			productReference = F9F6FBC51CAFD8AE009421E3 /* Tiempo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9F6FBE01CAFD8AE009421E3 /* TiempoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F6FBF81CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "TiempoTests" */;
+			buildPhases = (
+				F9F6FBDD1CAFD8AE009421E3 /* Sources */,
+				F9F6FBDE1CAFD8AE009421E3 /* Frameworks */,
+				F9F6FBDF1CAFD8AE009421E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9F6FBE31CAFD8AE009421E3 /* PBXTargetDependency */,
+			);
+			name = TiempoTests;
+			productName = TiempoTests;
+			productReference = F9F6FBE11CAFD8AE009421E3 /* TiempoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9F6FBEB1CAFD8AE009421E3 /* TiempoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F6FBFB1CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "TiempoUITests" */;
+			buildPhases = (
+				F9F6FBE81CAFD8AE009421E3 /* Sources */,
+				F9F6FBE91CAFD8AE009421E3 /* Frameworks */,
+				F9F6FBEA1CAFD8AE009421E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9F6FBEE1CAFD8AE009421E3 /* PBXTargetDependency */,
+			);
+			name = TiempoUITests;
+			productName = TiempoUITests;
+			productReference = F9F6FBEC1CAFD8AE009421E3 /* TiempoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9F6FBBD1CAFD8AE009421E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "David Boillos";
+				TargetAttributes = {
+					F9F6FBC41CAFD8AE009421E3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					F9F6FBE01CAFD8AE009421E3 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F9F6FBC41CAFD8AE009421E3;
+					};
+					F9F6FBEB1CAFD8AE009421E3 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F9F6FBC41CAFD8AE009421E3;
+					};
+				};
+			};
+			buildConfigurationList = F9F6FBC01CAFD8AE009421E3 /* Build configuration list for PBXProject "Tiempo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9F6FBBC1CAFD8AE009421E3;
+			productRefGroup = F9F6FBC61CAFD8AE009421E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9F6FBC41CAFD8AE009421E3 /* Tiempo */,
+				F9F6FBE01CAFD8AE009421E3 /* TiempoTests */,
+				F9F6FBEB1CAFD8AE009421E3 /* TiempoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9F6FBC31CAFD8AE009421E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F6FBDB1CAFD8AE009421E3 /* LaunchScreen.storyboard in Resources */,
+				F9F6FBD81CAFD8AE009421E3 /* Assets.xcassets in Resources */,
+				F9F6FBD31CAFD8AE009421E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F6FBDF1CAFD8AE009421E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F6FBEA1CAFD8AE009421E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9F6FBC11CAFD8AE009421E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F6FBD01CAFD8AE009421E3 /* ViewController.m in Sources */,
+				F9F6FBD61CAFD8AE009421E3 /* Tiempo.xcdatamodeld in Sources */,
+				F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */,
+				F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F6FBDD1CAFD8AE009421E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F6FBE61CAFD8AE009421E3 /* TiempoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9F6FBE81CAFD8AE009421E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F6FBF11CAFD8AE009421E3 /* TiempoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9F6FBE31CAFD8AE009421E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9F6FBC41CAFD8AE009421E3 /* Tiempo */;
+			targetProxy = F9F6FBE21CAFD8AE009421E3 /* PBXContainerItemProxy */;
+		};
+		F9F6FBEE1CAFD8AE009421E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9F6FBC41CAFD8AE009421E3 /* Tiempo */;
+			targetProxy = F9F6FBED1CAFD8AE009421E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9F6FBD11CAFD8AE009421E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9F6FBD21CAFD8AE009421E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9F6FBD91CAFD8AE009421E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9F6FBDA1CAFD8AE009421E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9F6FBF31CAFD8AE009421E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9F6FBF41CAFD8AE009421E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9F6FBF61CAFD8AE009421E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tiempo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.Tiempo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F9F6FBF71CAFD8AE009421E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tiempo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.Tiempo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F9F6FBF91CAFD8AE009421E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TiempoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.TiempoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tiempo.app/Tiempo";
+			};
+			name = Debug;
+		};
+		F9F6FBFA1CAFD8AE009421E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TiempoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.TiempoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tiempo.app/Tiempo";
+			};
+			name = Release;
+		};
+		F9F6FBFC1CAFD8AE009421E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TiempoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.TiempoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tiempo;
+			};
+			name = Debug;
+		};
+		F9F6FBFD1CAFD8AE009421E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TiempoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.TiempoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tiempo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9F6FBC01CAFD8AE009421E3 /* Build configuration list for PBXProject "Tiempo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F6FBF31CAFD8AE009421E3 /* Debug */,
+				F9F6FBF41CAFD8AE009421E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9F6FBF51CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "Tiempo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F6FBF61CAFD8AE009421E3 /* Debug */,
+				F9F6FBF71CAFD8AE009421E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F9F6FBF81CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "TiempoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F6FBF91CAFD8AE009421E3 /* Debug */,
+				F9F6FBFA1CAFD8AE009421E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F9F6FBFB1CAFD8AE009421E3 /* Build configuration list for PBXNativeTarget "TiempoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9F6FBFC1CAFD8AE009421E3 /* Debug */,
+				F9F6FBFD1CAFD8AE009421E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9F6FBD41CAFD8AE009421E3 /* Tiempo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9F6FBD51CAFD8AE009421E3 /* Tiempo.xcdatamodel */,
+			);
+			currentVersion = F9F6FBD51CAFD8AE009421E3 /* Tiempo.xcdatamodel */;
+			path = Tiempo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F9F6FBBD1CAFD8AE009421E3 /* Project object */;
+}
