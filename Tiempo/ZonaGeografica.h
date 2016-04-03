@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Insert code here to declare functionality of your managed object subclass
 
+//Devuelve una representacion en NSDictionary de los atributos
+-(NSDictionary*) toDictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

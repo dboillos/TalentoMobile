@@ -21,7 +21,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
-- (void)guardarEntidadGeografica: (NSDictionary*) datosEntidad;
+- (ZonaGeografica*)guardarEntidadGeografica: (NSDictionary*) datosEntidad;
 -(NSArray*)obtenerHistorial;
 
 @end

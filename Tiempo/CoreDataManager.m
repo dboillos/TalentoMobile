@@ -35,15 +35,17 @@ static CoreDataManager *_instancia;
     return _instancia;
 }
 
-- (void)guardarEntidadGeografica: (NSDictionary*) datosEntidad{
+- (ZonaGeografica*)guardarEntidadGeografica: (NSDictionary*) datosEntidad{
     ZonaGeografica *entidadGeografica = [NSEntityDescription insertNewObjectForEntityForName:@"ZonaGeografica" inManagedObjectContext: [self managedObjectContext] ];
     [entidadGeografica setNombre: [datosEntidad objectForKey:@"nombre"]];
-    /*[entidadGeografica setLimiteNorte: [datosEntidad objectForKey:@"limiteNorte"]];
+    [entidadGeografica setLimiteNorte: [datosEntidad objectForKey:@"limiteNorte"]];
     [entidadGeografica setLimiteSur: [datosEntidad objectForKey:@"limiteSur"]];
     [entidadGeografica setLimiteEste: [datosEntidad objectForKey:@"limiteEste"]];
-    [entidadGeografica setLimiteOeste: [datosEntidad objectForKey:@"limiteOeste"]];*/
+    [entidadGeografica setLimiteOeste: [datosEntidad objectForKey:@"limiteOeste"]];
     
     [self saveContext];
+    
+    return entidadGeografica;
 }
 
 -(NSArray*)obtenerHistorial{
@@ -61,14 +63,7 @@ static CoreDataManager *_instancia;
     //usarlo en el TableView
     NSMutableArray *resultados = [[NSMutableArray alloc] init];
     for (id zonaGeografica in zonasGeograficas) {
-        NSDictionary *datos = @{
-                                       @"nombre" : [zonaGeografica nombre],
-                                      /* @"limiteEste" : [bbox objectForKey:@"east"],
-                                       @"limiteNorte" : [bbox objectForKey:@"north"],
-                                       @"limiteSur" : [bbox objectForKey:@"south"],
-                                       @"limiteOeste" : [bbox objectForKey:@"west"]*/
-                                       };
-        [ resultados addObject:datos ];
+        [ resultados addObject:[zonaGeografica toDictionary] ];
     }
     
     return resultados;

@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZonaGeografica (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *nombre;
+@property (nullable, nonatomic, retain) NSString *limiteNorte;
+@property (nullable, nonatomic, retain) NSString *limiteSur;
+@property (nullable, nonatomic, retain) NSString *limiteEste;
+@property (nullable, nonatomic, retain) NSString *limiteOeste;
 
 @end
 

@@ -48,12 +48,13 @@
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
-    
     //guardamos el objeto que corresponde a la pulsación con CoreData para mostrarlo la primera que se
     //muestra la barra de busqueda a modo de historial.
     NSDictionary *datosFila = [_resultadoBusqueda objectAtIndex: [indexPath row]];
-    [_coreDataManager guardarEntidadGeografica:datosFila];
-
+    ZonaGeografica *zonaGeografica = [_coreDataManager guardarEntidadGeografica:datosFila];
+    
+    [self performSegueWithIdentifier:@"irAMapViewController" sender:zonaGeografica];
+    
 }
 
 
@@ -65,9 +66,12 @@
     {
         NSString *cadenaDeBusqueda = searchController.searchBar.text;
         if ([cadenaDeBusqueda length] == 0 ) {
-            searchController.searchResultsController.view.hidden = false; //para que
-            //muestre la tabla
             _resultadoBusqueda = (NSMutableArray*)[_coreDataManager obtenerHistorial];
+            if ([_resultadoBusqueda count] > 0){
+                searchController.searchResultsController.view.hidden = false; //para que
+                //muestre la tabla
+            }
+                
         } else {
             [self buscarGeoName: cadenaDeBusqueda ];
         }
@@ -101,17 +105,20 @@
                 
                 NSArray* datos = [returnedDict objectForKey:@"geonames"];
                 for (id dato in datos) {
-                    NSString *name = [dato objectForKey:@"name"];
                     NSDictionary *bbox = [dato objectForKey:@"bbox"];
                     
                     if (bbox != nil){
+                        NSString *name = [dato objectForKey:@"name"];
+                        NSString *limiteEste = [[bbox objectForKey:@"east"] stringValue];
+                        NSString *limiteOeste = [[bbox objectForKey:@"west"] stringValue];
+                        NSString *limiteSur = [[bbox objectForKey:@"south"] stringValue];
+                        NSString *limiteNorte = [[bbox objectForKey:@"north"] stringValue];
                         NSDictionary *datosGeoName = @{
-                                                       @"nombre" : name,
-                                                       @"limiteEste" : [bbox objectForKey:@"east"],
-                                                       @"limiteNorte" : [bbox objectForKey:@"north"],
-                                                       @"limiteSur" : [bbox objectForKey:@"south"],
-                                                       @"limiteOeste" : [bbox objectForKey:@"west"]
-                                                       };
+                                    @"nombre" : name,
+                                    @"limiteEste" : limiteEste,
+                                    @"limiteNorte" : limiteNorte,
+                                    @"limiteSur" : limiteSur,
+                                    @"limiteOeste" : limiteOeste};
                         [_resultadoBusqueda addObject:datosGeoName];
                         
                         [self.tableView reloadData];
@@ -157,14 +164,14 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [[segue destinationViewController] setValue:sender forKey:@"_zonaGeografica"];
+
 }
-*/
+
 
 @end

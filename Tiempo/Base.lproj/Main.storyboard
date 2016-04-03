@@ -71,10 +71,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="_mapView" destination="Qzm-IG-QiJ" id="7Am-kz-G1H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="239"/>
+            <point key="canvasLocation" x="-208" y="919"/>
         </scene>
         <!--Tabla Resultados Table View Controller-->
         <scene sceneID="IYW-tc-xbO">
@@ -100,10 +103,13 @@
                             <outlet property="delegate" destination="RH1-Wc-Tgq" id="UGY-gX-Wg3"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="irAMapViewController" id="dmz-ZE-n90"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edg-3y-cj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="332" y="1017"/>
+            <point key="canvasLocation" x="607" y="945"/>
         </scene>
     </scenes>
 </document>

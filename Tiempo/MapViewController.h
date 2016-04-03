@@ -12,9 +12,12 @@
 
 #define METERS_PER_MILE 1609.344
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <MKMapViewDelegate>
 
     @property IBOutlet MKMapView *_mapView;
+
+    @property ZonaGeografica *_zonaGeografica;  //si no es nil mostraremos pediremos y
+        //mostraremos sus datos
 
 @end
 

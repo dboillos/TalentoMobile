@@ -14,5 +14,9 @@
 @implementation ZonaGeografica (CoreDataProperties)
 
 @dynamic nombre;
+@dynamic limiteNorte;
+@dynamic limiteSur;
+@dynamic limiteEste;
+@dynamic limiteOeste;
 
 @end
