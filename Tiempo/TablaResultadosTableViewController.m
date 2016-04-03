@@ -8,7 +8,7 @@
 
 #import "TablaResultadosTableViewController.h"
 
-@interface TablaResultadosTableViewController () <UISearchResultsUpdating>
+@interface TablaResultadosTableViewController () 
 
 @end
 
@@ -16,6 +16,7 @@
 
     - (void)viewDidLoad {
         [super viewDidLoad];
+        _coreDataManager = [ CoreDataManager defaultCoreDataManager ];
     }
 
 
@@ -39,15 +40,31 @@
         return cell;
     }
 
+#pragma mark - Table view delegate
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    
+    
+    //guardamos el objeto que corresponde a la pulsación con CoreData para mostrarlo la primera que se
+    //muestra la barra de busqueda a modo de historial.
+    NSDictionary *datosFila = [_resultadoBusqueda objectAtIndex: [indexPath row]];
+    [_coreDataManager guardarEntidadGeografica:datosFila];
+
+}
+
+
 #pragma mark - UISearchResultsUpdating
 
     //llamada cuando se escribe en la barra de busqueda
     - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
     {
         NSString *cadenaDeBusqueda = searchController.searchBar.text;
-        [self buscarGeoName: cadenaDeBusqueda ];
-        
-        [self.tableView reloadData];
+        if ([cadenaDeBusqueda length] == 0 ) {
+            _resultadoBusqueda = (NSMutableArray*)[_coreDataManager obtenerHistorial];
+        } else {
+            [self buscarGeoName: cadenaDeBusqueda ];
+            [self.tableView reloadData];
+        }
     }
 
 #pragma mark - Funciones Privadas

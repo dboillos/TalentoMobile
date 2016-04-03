@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Utilidades.h"
+#import "CoreDataManager.h"
+#import "ZonaGeografica.h"
 
-@interface TablaResultadosTableViewController : UITableViewController
+@interface TablaResultadosTableViewController : UITableViewController <UISearchResultsUpdating>
 
 {
     
 @private
     NSMutableArray *_resultadoBusqueda;
-    
+    CoreDataManager *_coreDataManager;
     
 }
 

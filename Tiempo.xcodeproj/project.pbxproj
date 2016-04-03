@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F98F1E391CB1281200F03CB5 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F98F1E381CB1281200F03CB5 /* CoreDataManager.m */; };
+		F98F1E621CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F98F1E5F1CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.m */; };
+		F98F1E631CB13D3100F03CB5 /* ZonaGeografica.m in Sources */ = {isa = PBXBuildFile; fileRef = F98F1E611CB13D3100F03CB5 /* ZonaGeografica.m */; };
 		F9E3869B1CB0FBF3008023C3 /* Utilidades.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3869A1CB0FBF3008023C3 /* Utilidades.m */; };
 		F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBC91CAFD8AE009421E3 /* main.m */; };
 		F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */; };
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F98F1E371CB1281200F03CB5 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		F98F1E381CB1281200F03CB5 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		F98F1E5E1CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZonaGeografica+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F98F1E5F1CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZonaGeografica+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F98F1E601CB13D3100F03CB5 /* ZonaGeografica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZonaGeografica.h; sourceTree = "<group>"; };
+		F98F1E611CB13D3100F03CB5 /* ZonaGeografica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZonaGeografica.m; sourceTree = "<group>"; };
 		F9E386991CB0FBF3008023C3 /* Utilidades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilidades.h; sourceTree = "<group>"; };
 		F9E3869A1CB0FBF3008023C3 /* Utilidades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilidades.m; sourceTree = "<group>"; };
 		F9F6FBC51CAFD8AE009421E3 /* Tiempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,11 +98,24 @@
 		F98F1E361CB127DE00F03CB5 /* Modelo.Persintencia */ = {
 			isa = PBXGroup;
 			children = (
+				F98F1E371CB1281200F03CB5 /* CoreDataManager.h */,
+				F98F1E381CB1281200F03CB5 /* CoreDataManager.m */,
 			);
 			name = Modelo.Persintencia;
 			sourceTree = "<group>";
 		};
-		F9AAB6161CB0324F004B3644 /* Controladores */ = {
+		F98F1E571CB13B7B00F03CB5 /* Modelo.Entidad */ = {
+			isa = PBXGroup;
+			children = (
+				F98F1E5E1CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.h */,
+				F98F1E5F1CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.m */,
+				F98F1E601CB13D3100F03CB5 /* ZonaGeografica.h */,
+				F98F1E611CB13D3100F03CB5 /* ZonaGeografica.m */,
+			);
+			name = Modelo.Entidad;
+			sourceTree = "<group>";
+		};
+		F9AAB6161CB0324F004B3644 /* Controlador.Controladores */ = {
 			isa = PBXGroup;
 			children = (
 				F9F6FBCE1CAFD8AE009421E3 /* MapViewController.h */,
@@ -101,7 +123,7 @@
 				F9F6FBFE1CAFE12C009421E3 /* TablaResultadosTableViewController.h */,
 				F9F6FBFF1CAFE12C009421E3 /* TablaResultadosTableViewController.m */,
 			);
-			name = Controladores;
+			name = Controlador.Controladores;
 			sourceTree = "<group>";
 		};
 		F9E386961CB0FB55008023C3 /* Utilidades */ = {
@@ -136,11 +158,12 @@
 		F9F6FBC71CAFD8AE009421E3 /* Tiempo */ = {
 			isa = PBXGroup;
 			children = (
+				F98F1E571CB13B7B00F03CB5 /* Modelo.Entidad */,
 				F98F1E361CB127DE00F03CB5 /* Modelo.Persintencia */,
 				F9E386961CB0FB55008023C3 /* Utilidades */,
 				F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */,
 				F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */,
-				F9AAB6161CB0324F004B3644 /* Controladores */,
+				F9AAB6161CB0324F004B3644 /* Controlador.Controladores */,
 				F9F6FBD11CAFD8AE009421E3 /* Main.storyboard */,
 				F9F6FBD71CAFD8AE009421E3 /* Assets.xcassets */,
 				F9F6FBD91CAFD8AE009421E3 /* LaunchScreen.storyboard */,
@@ -308,11 +331,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9F6FBD01CAFD8AE009421E3 /* MapViewController.m in Sources */,
+				F98F1E621CB13D3100F03CB5 /* ZonaGeografica+CoreDataProperties.m in Sources */,
+				F98F1E631CB13D3100F03CB5 /* ZonaGeografica.m in Sources */,
 				F9F6FBD61CAFD8AE009421E3 /* Tiempo.xcdatamodeld in Sources */,
 				F9E3869B1CB0FBF3008023C3 /* Utilidades.m in Sources */,
 				F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */,
 				F9F6FC001CAFE12C009421E3 /* TablaResultadosTableViewController.m in Sources */,
 				F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */,
+				F98F1E391CB1281200F03CB5 /* CoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,10 +481,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tiempo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.Tiempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tiempo/Tiempo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -466,10 +495,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Tiempo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.talentomobile.Tiempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tiempo/Tiempo-Bridging-Header.h";
 			};
 			name = Release;
 		};
