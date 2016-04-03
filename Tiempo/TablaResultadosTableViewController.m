@@ -32,7 +32,6 @@
 #pragma mark - Table view data source
 
     - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        NSLog(@"%lu",(unsigned long)[_resultadoBusqueda count]);
         return [_resultadoBusqueda count];
     }
 
@@ -41,7 +40,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
         cell.textLabel.text = [[_resultadoBusqueda objectAtIndex:indexPath.row] objectForKey:@"nombre"];
-        NSLog(@"%@",cell.textLabel.text);
+
         return cell;
     }
 
@@ -81,6 +80,7 @@
 
 - (void)buscarGeoName:(NSString*) nombre
 {
+    NSLog(@"Pedimos entidades geograficas");
     // Prepare the URL that we'll get the country info data from.
     NSString *URLString = [NSString stringWithFormat:@"http://api.geonames.org/searchJSON?q=%@&maxRows=10&startRow=0&lang=en&isNameRequired=true&style=FULL&username=ilgeonamessample", nombre];
     NSURL *url = [NSURL URLWithString:URLString];
