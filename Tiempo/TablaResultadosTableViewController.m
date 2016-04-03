@@ -34,7 +34,7 @@
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
-        cell.textLabel.text = [[_resultadoBusqueda objectAtIndex:indexPath.row] objectForKey:@"name"];
+        cell.textLabel.text = [[_resultadoBusqueda objectAtIndex:indexPath.row] objectForKey:@"nombre"];
         
         return cell;
     }
@@ -79,11 +79,11 @@
                     
                     if (bbox != nil){
                         NSDictionary *datosGeoName = @{
-                                                       @"name" : name,
-                                                       @"east" : [bbox objectForKey:@"east"],
-                                                       @"north" : [bbox objectForKey:@"north"],
-                                                       @"south" : [bbox objectForKey:@"south"],
-                                                       @"west" : [bbox objectForKey:@"west"]
+                                                       @"nombre" : name,
+                                                       @"limiteEste" : [bbox objectForKey:@"east"],
+                                                       @"limiteNorte" : [bbox objectForKey:@"north"],
+                                                       @"limiteSur" : [bbox objectForKey:@"south"],
+                                                       @"limiteOeste" : [bbox objectForKey:@"west"]
                                                        };
                         [_resultadoBusqueda addObject:datosGeoName];
                         

@@ -86,6 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F98F1E361CB127DE00F03CB5 /* Modelo.Persintencia */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modelo.Persintencia;
+			sourceTree = "<group>";
+		};
 		F9AAB6161CB0324F004B3644 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +136,7 @@
 		F9F6FBC71CAFD8AE009421E3 /* Tiempo */ = {
 			isa = PBXGroup;
 			children = (
+				F98F1E361CB127DE00F03CB5 /* Modelo.Persintencia */,
 				F9E386961CB0FB55008023C3 /* Utilidades */,
 				F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */,
 				F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */,
