@@ -19,6 +19,10 @@
         _coreDataManager = [ CoreDataManager defaultCoreDataManager ];
     }
 
+    -(void) viewWillAppear:(BOOL)animated{
+        _resultadoBusqueda = (NSMutableArray*)[_coreDataManager obtenerHistorial];
+    }
+
 
     - (void)didReceiveMemoryWarning {
         [super didReceiveMemoryWarning];
@@ -28,6 +32,7 @@
 #pragma mark - Table view data source
 
     - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+        NSLog(@"%lu",(unsigned long)[_resultadoBusqueda count]);
         return [_resultadoBusqueda count];
     }
 
@@ -36,7 +41,7 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
         cell.textLabel.text = [[_resultadoBusqueda objectAtIndex:indexPath.row] objectForKey:@"nombre"];
-        
+        NSLog(@"%@",cell.textLabel.text);
         return cell;
     }
 
@@ -55,17 +60,22 @@
 
 #pragma mark - UISearchResultsUpdating
 
+
     //llamada cuando se escribe en la barra de busqueda
     - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
     {
         NSString *cadenaDeBusqueda = searchController.searchBar.text;
         if ([cadenaDeBusqueda length] == 0 ) {
+            searchController.searchResultsController.view.hidden = false; //para que
+            //muestre la tabla
             _resultadoBusqueda = (NSMutableArray*)[_coreDataManager obtenerHistorial];
         } else {
             [self buscarGeoName: cadenaDeBusqueda ];
-            [self.tableView reloadData];
         }
+        
+        [self.tableView reloadData];
     }
+
 
 #pragma mark - Funciones Privadas
 

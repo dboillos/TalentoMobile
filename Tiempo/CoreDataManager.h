@@ -18,7 +18,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)saveContext:(NSError **) error;
+- (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
 - (void)guardarEntidadGeografica: (NSDictionary*) datosEntidad;

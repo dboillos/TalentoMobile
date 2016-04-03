@@ -42,7 +42,8 @@ static CoreDataManager *_instancia;
     [entidadGeografica setLimiteSur: [datosEntidad objectForKey:@"limiteSur"]];
     [entidadGeografica setLimiteEste: [datosEntidad objectForKey:@"limiteEste"]];
     [entidadGeografica setLimiteOeste: [datosEntidad objectForKey:@"limiteOeste"]];*/
-     
+    
+    [self saveContext];
 }
 
 -(NSArray*)obtenerHistorial{
@@ -149,7 +150,6 @@ static CoreDataManager *_instancia;
         }
     }
 }
-
 
 
 @end

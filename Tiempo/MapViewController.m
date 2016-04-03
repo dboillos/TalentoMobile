@@ -48,7 +48,6 @@
         self.barraBusqueda.searchResultsUpdater = self.tablaResultados;
         self.barraBusqueda.hidesNavigationBarDuringPresentation = NO;
         self.barraBusqueda.dimsBackgroundDuringPresentation = NO;
-        self.definesPresentationContext = YES;
         [self presentViewController:self.barraBusqueda animated:YES completion:nil];
         
     }
