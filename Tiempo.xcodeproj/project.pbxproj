@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9E3869B1CB0FBF3008023C3 /* Utilidades.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E3869A1CB0FBF3008023C3 /* Utilidades.m */; };
 		F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBC91CAFD8AE009421E3 /* main.m */; };
 		F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */; };
 		F9F6FBD01CAFD8AE009421E3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6FBCF1CAFD8AE009421E3 /* MapViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9E386991CB0FBF3008023C3 /* Utilidades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilidades.h; sourceTree = "<group>"; };
+		F9E3869A1CB0FBF3008023C3 /* Utilidades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilidades.m; sourceTree = "<group>"; };
 		F9F6FBC51CAFD8AE009421E3 /* Tiempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F6FBC91CAFD8AE009421E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +97,15 @@
 			name = Controladores;
 			sourceTree = "<group>";
 		};
+		F9E386961CB0FB55008023C3 /* Utilidades */ = {
+			isa = PBXGroup;
+			children = (
+				F9E386991CB0FBF3008023C3 /* Utilidades.h */,
+				F9E3869A1CB0FBF3008023C3 /* Utilidades.m */,
+			);
+			name = Utilidades;
+			sourceTree = "<group>";
+		};
 		F9F6FBBC1CAFD8AE009421E3 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +129,7 @@
 		F9F6FBC71CAFD8AE009421E3 /* Tiempo */ = {
 			isa = PBXGroup;
 			children = (
+				F9E386961CB0FB55008023C3 /* Utilidades */,
 				F9F6FBCB1CAFD8AE009421E3 /* AppDelegate.h */,
 				F9F6FBCC1CAFD8AE009421E3 /* AppDelegate.m */,
 				F9AAB6161CB0324F004B3644 /* Controladores */,
@@ -288,6 +301,7 @@
 			files = (
 				F9F6FBD01CAFD8AE009421E3 /* MapViewController.m in Sources */,
 				F9F6FBD61CAFD8AE009421E3 /* Tiempo.xcdatamodeld in Sources */,
+				F9E3869B1CB0FBF3008023C3 /* Utilidades.m in Sources */,
 				F9F6FBCD1CAFD8AE009421E3 /* AppDelegate.m in Sources */,
 				F9F6FC001CAFE12C009421E3 /* TablaResultadosTableViewController.m in Sources */,
 				F9F6FBCA1CAFD8AE009421E3 /* main.m in Sources */,

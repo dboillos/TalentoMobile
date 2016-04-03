@@ -27,14 +27,14 @@
 #pragma mark - Table view data source
 
     - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        return 3;
+        return [_resultadoBusqueda count];
     }
 
     - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
-        cell.textLabel.text = @"Probando";
+        cell.textLabel.text = [[_resultadoBusqueda objectAtIndex:indexPath.row] objectForKey:@"name"];
         
         return cell;
     }
@@ -44,9 +44,56 @@
     //llamada cuando se escribe en la barra de busqueda
     - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
     {
-        printf("actualiza");
+        NSString *cadenaDeBusqueda = searchController.searchBar.text;
+        [self buscarGeoName: cadenaDeBusqueda ];
+        
         [self.tableView reloadData];
     }
+
+#pragma mark - Funciones Privadas
+
+- (void)buscarGeoName:(NSString*) nombre
+{
+    // Prepare the URL that we'll get the country info data from.
+    NSString *URLString = [NSString stringWithFormat:@"http://api.geonames.org/searchJSON?q=%@&maxRows=10&startRow=0&lang=en&isNameRequired=true&style=FULL&username=ilgeonamessample", nombre];
+    NSURL *url = [NSURL URLWithString:URLString];
+    
+    _resultadoBusqueda = [[NSMutableArray alloc] init];
+    
+    [Utilidades downloadDataFromURL:url withCompletionHandler:^(NSData *data) {
+        // Check if any data returned.
+        if (data != nil) {
+            // Convert the returned data into a dictionary.
+            NSError *error;
+            NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            
+            if (error != nil) {
+                NSLog(@"%@", [error localizedDescription]);
+            }
+            else{
+                
+                NSArray* datos = [returnedDict objectForKey:@"geonames"];
+                for (id dato in datos) {
+                    NSString *name = [dato objectForKey:@"name"];
+                    NSDictionary *bbox = [dato objectForKey:@"bbox"];
+                    
+                    if (bbox != nil){
+                        NSDictionary *datosGeoName = @{
+                                                       @"name" : name,
+                                                       @"east" : [bbox objectForKey:@"east"],
+                                                       @"north" : [bbox objectForKey:@"north"],
+                                                       @"south" : [bbox objectForKey:@"south"],
+                                                       @"west" : [bbox objectForKey:@"west"]
+                                                       };
+                        [_resultadoBusqueda addObject:datosGeoName];
+                        
+                        [self.tableView reloadData];
+                    }
+                }
+            }
+        }
+    }];
+}
 
 
 /*

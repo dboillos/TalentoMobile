@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utilidades.h"
 
 @interface TablaResultadosTableViewController : UITableViewController
+
+{
+    
+@private
+    NSMutableArray *_resultadoBusqueda;
+    
+    
+}
 
 @end
