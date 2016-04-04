@@ -12,15 +12,15 @@
 
 // Insert code here to add functionality to your managed object subclass
 
--(NSDictionary*) toDictionary{
-    NSDictionary *representacion = @{
-                                     @"nombre" : [self nombre],
-                                      @"limiteEste" : [self limiteEste],
-                                      @"limiteNorte" : [self limiteNorte],
-                                      @"limiteSur" : [self limiteSur],
-                                      @"limiteOeste" : [self limiteOeste]
-                                     };
-    return representacion;
-}
+    -(NSDictionary*) toDictionary{
+        NSDictionary *representacion = @{
+                         @"nombre" : [self nombre],
+                          @"limiteEste" : [self limiteEste],
+                          @"limiteNorte" : [self limiteNorte],
+                          @"limiteSur" : [self limiteSur],
+                          @"limiteOeste" : [self limiteOeste]
+                         };
+        return representacion;
+    }
 
 @end

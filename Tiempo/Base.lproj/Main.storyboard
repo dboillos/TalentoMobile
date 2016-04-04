@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="64" id="vfQ-Y2-Xdg"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="piA-mt-BQG">
+                                    <navigationItem title="TalentoMobile" id="piA-mt-BQG">
                                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="FcB-GF-gRq">
                                             <connections>
                                                 <action selector="pulsadoBuscar:" destination="BYZ-38-t0r" id="3z5-jD-0cY"/>
@@ -76,6 +76,7 @@
                     </view>
                     <connections>
                         <outlet property="_mapView" destination="Qzm-IG-QiJ" id="7Am-kz-G1H"/>
+                        <outlet property="navigationBar" destination="piA-mt-BQG" id="AiP-ty-p4a"/>
                         <outlet property="temperaturaLabel" destination="zau-48-zfc" id="poD-Mk-GWy"/>
                     </connections>
                 </viewController>

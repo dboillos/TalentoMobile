@@ -10,14 +10,14 @@
 #import <MapKit/MapKit.h>
 #import "TablaResultadosTableViewController.h"
 
-#define METERS_PER_MILE 1609.344
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
     @property IBOutlet MKMapView *_mapView;
+    @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 
-    @property ZonaGeografica *_zonaGeografica;  //si no es nil mostraremos pediremos y
-        //mostraremos sus datos
+    @property ZonaGeografica *_zonaGeografica;  //si no es nil pediremos y
+        //mostraremos sus datos en el mapa y en el Label de temperatura
 
 @end
 

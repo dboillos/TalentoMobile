@@ -8,7 +8,12 @@
 
 #import "TablaResultadosTableViewController.h"
 
-@interface TablaResultadosTableViewController () 
+@interface TablaResultadosTableViewController ()
+
+    #define URL_SERVICIO_ZONAS @"http://api.geonames.org/searchJSON?q=%@&maxRows=10&startRow=0&lang=en&isNameRequired=true&style=FULL&username=ilgeonamessample"
+
+    @property NSMutableArray *resultadoBusqueda;
+    @property CoreDataManager *coreDataManager;
 
 @end
 
@@ -31,10 +36,12 @@
 
 #pragma mark - Table view data source
 
+    //devolvemso el numero de filas a mostrar en la tabla
     - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
         return [_resultadoBusqueda count];
     }
 
+    //tenemos que devolver al celda de la tabla. Utilizamos el identificador "cell" para la reutilizacion
     - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -46,20 +53,21 @@
 
 #pragma mark - Table view delegate
 
-- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    
-    //guardamos el objeto que corresponde a la pulsación con CoreData para mostrarlo la primera que se
-    //muestra la barra de busqueda a modo de historial.
-    NSDictionary *datosFila = [_resultadoBusqueda objectAtIndex: [indexPath row]];
-    ZonaGeografica *zonaGeografica = [_coreDataManager guardarEntidadGeografica:datosFila];
-    
-    [self performSegueWithIdentifier:@"irAMapViewController" sender:zonaGeografica];
-    
-}
+    //captura el evento de seleccion de una fila de la tabla
+    //Guardaremos la zona en el historial y lanzamos el segue
+    - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+        
+        //guardamos el objeto que corresponde a la pulsación con CoreData para mostrarlo la primera que se
+        //muestra la barra de busqueda a modo de historial.
+        NSDictionary *datosFila = [_resultadoBusqueda objectAtIndex: [indexPath row]];
+        ZonaGeografica *zonaGeografica = [_coreDataManager guardarEntidadGeografica:datosFila];
+        
+        [self performSegueWithIdentifier:@"irAMapViewController" sender:zonaGeografica];
+        
+    }
 
 
 #pragma mark - UISearchResultsUpdating
-
 
     //llamada cuando se escribe en la barra de busqueda
     - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
@@ -86,7 +94,7 @@
 {
     NSLog(@"Pedimos entidades geograficas");
     // Prepare the URL that we'll get the country info data from.
-    NSString *URLString = [NSString stringWithFormat:@"http://api.geonames.org/searchJSON?q=%@&maxRows=10&startRow=0&lang=en&isNameRequired=true&style=FULL&username=ilgeonamessample", nombre];
+    NSString *URLString = [NSString stringWithFormat:URL_SERVICIO_ZONAS, nombre];
     NSURL *url = [NSURL URLWithString:URLString];
     
     _resultadoBusqueda = [[NSMutableArray alloc] init];
@@ -129,49 +137,13 @@
     }];
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [[segue destinationViewController] setValue:sender forKey:@"_zonaGeografica"];
+    // Le añadimos el objeto ZonaGeografica con los datos de la zona a mostrar
+    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+        [[segue destinationViewController] setValue:sender forKey:@"_zonaGeografica"];
 
-}
+    }
 
 
 @end

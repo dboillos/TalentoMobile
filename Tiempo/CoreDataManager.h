@@ -10,18 +10,27 @@
 #import <CoreData/CoreData.h>
 #import "ZonaGeografica.h"
 
+//Contiene todas las funcionalidades de CoreData
+
 @interface CoreDataManager : NSObject
 
-+(CoreDataManager *) defaultCoreDataManager;
+    +(CoreDataManager *) defaultCoreDataManager;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+    @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+    @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+    @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+    //Guarda el contexto para que se graban en disco los objetos que se mantengan en "Core Data"
+    - (void)saveContext;
 
-- (ZonaGeografica*)guardarEntidadGeografica: (NSDictionary*) datosEntidad;
--(NSArray*)obtenerHistorial;
+    - (NSURL *)applicationDocumentsDirectory;
+
+    //Crea y guarda un objeto de tipo ZonaGeografica.h que contiene
+    //el nombre de la zona geografica, limiteNorte, limiteSur, limiteEste y limiteOeste
+    - (ZonaGeografica*)guardarEntidadGeografica: (NSDictionary*) datosEntidad;
+
+    //Obtiene un NSArray con objetos ZonaGeografica.h con las ultimas selecciones
+    //que se hicieron en la barra de busqueda
+    -(NSArray*)obtenerHistorial;
 
 @end

@@ -13,12 +13,5 @@
 
 @interface TablaResultadosTableViewController : UITableViewController <UISearchResultsUpdating>
 
-{
-    
-@private
-    NSMutableArray *_resultadoBusqueda;
-    CoreDataManager *_coreDataManager;
-    
-}
 
 @end
