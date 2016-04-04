@@ -97,6 +97,7 @@
                 }
                 else{
                     //extraemos los datos que hemos recibido del json
+                    NSLog(@"%@",returnedDict);
                     NSArray *datos = [returnedDict objectForKey:@"weatherObservations"];
                     for (id dato in datos) {
                         NSNumber *latitud = [dato objectForKey:@"lat"];

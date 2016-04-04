@@ -110,7 +110,7 @@
                 NSLog(@"%@", [error localizedDescription]);
             }
             else{
-                
+                NSLog(@"%@",returnedDict);
                 NSArray* datos = [returnedDict objectForKey:@"geonames"];
                 for (id dato in datos) {
                     NSDictionary *bbox = [dato objectForKey:@"bbox"];
