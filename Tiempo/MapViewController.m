@@ -14,6 +14,13 @@
     @property  TablaResultadosTableViewController *tablaResultados;
     @property NSMutableArray *resultadoBusqueda;
     @property double temperaturaMedia;
+    @property (weak, nonatomic) IBOutlet UILabel *temperaturaLabel;
+
+    //Colores con los que pintaremos el Label
+    #define TEMPERATURA_MENOR_10 [UIColor colorWithRed:0.076  green:0.212  blue:0.804  alpha:1.00]
+    #define TEMPERATURA_10_20  [UIColor colorWithRed: 0.618 green: 0.794 blue: 0.804 alpha: 1.00]
+    #define TEMPERATURA_20_30  [UIColor colorWithRed: 0.804 green: 0.500 blue: 0.535 alpha: 1.00]
+    #define TEMPERATURA_MAYOR_30 [UIColor colorWithRed: 0.804 green: 0.071 blue: 0.102 alpha: 1.00]
 
 @end
 
@@ -34,16 +41,9 @@
         if (_zonaGeografica != nil){
             //tenemos datos para pintar
             [self pedirTemperaturas:_zonaGeografica];
-        } /*else {
-            CLLocationCoordinate2D zoomLocation;
-            zoomLocation.latitude = 40.416775;
-            zoomLocation.longitude= -3.703789;
-            
-            MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 500, 500);
-            
-            MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];
-            [ _mapView setRegion:adjustedRegion animated:YES];
-        }*/
+        } else {
+            _temperaturaLabel.text = @"";
+        }
     
     
         [ _mapView setShowsPointsOfInterest:NO ];
@@ -129,11 +129,26 @@
         [ anotacion setTitle: [NSString stringWithFormat:@"Temperatura: %@", temperatura] ];
         [estaciones addObject:anotacion];
     }
+    
     _temperaturaMedia = _temperaturaMedia / [_resultadoBusqueda count];
+    [self pintarLabelTemperatura];
     
     [_mapView showAnnotations:estaciones animated:YES];
 }
 
-
+-(void) pintarLabelTemperatura{
+    _temperaturaLabel.text =  [NSString stringWithFormat:@"%.2f grados", _temperaturaMedia];
+    
+    if (_temperaturaMedia < 10){
+        _temperaturaLabel.backgroundColor = TEMPERATURA_MENOR_10;
+    } else if (10 <= _temperaturaMedia && _temperaturaMedia < 20){
+        _temperaturaLabel.backgroundColor  = TEMPERATURA_10_20;
+    } else if (20 <= _temperaturaMedia && _temperaturaMedia < 30){
+        _temperaturaLabel.backgroundColor = TEMPERATURA_MENOR_10;
+    } else {
+        _temperaturaLabel.backgroundColor = TEMPERATURA_MENOR_10;
+    }
+        
+}
 
 @end

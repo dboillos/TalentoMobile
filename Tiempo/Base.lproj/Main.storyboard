@@ -35,16 +35,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cma-G4-Sdy">
                                 <rect key="frame" x="0.0" y="64" width="600" height="53"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iX6-M0-Tu1">
-                                        <rect key="frame" x="20" y="26" width="560" height="2"/>
-                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zau-48-zfc">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+                                        <color key="backgroundColor" red="0.80802792320000005" green="0.80802792320000005" blue="0.80802792320000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="iX6-M0-Tu1" firstAttribute="centerX" secondItem="Cma-G4-Sdy" secondAttribute="centerX" id="3Ez-iu-jrQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zau-48-zfc" secondAttribute="trailing" id="3Wy-OI-0JL"/>
+                                    <constraint firstItem="zau-48-zfc" firstAttribute="leading" secondItem="Cma-G4-Sdy" secondAttribute="leading" id="4aC-YN-Hx7"/>
                                     <constraint firstAttribute="height" constant="53" id="N4p-1A-hNK"/>
-                                    <constraint firstAttribute="trailing" secondItem="iX6-M0-Tu1" secondAttribute="trailing" constant="20" id="TO5-6y-5h0"/>
-                                    <constraint firstItem="iX6-M0-Tu1" firstAttribute="centerY" secondItem="Cma-G4-Sdy" secondAttribute="centerY" id="byy-71-EYI"/>
-                                    <constraint firstItem="iX6-M0-Tu1" firstAttribute="leading" secondItem="Cma-G4-Sdy" secondAttribute="leading" constant="20" id="rq9-ND-Sgs"/>
+                                    <constraint firstItem="zau-48-zfc" firstAttribute="top" secondItem="Cma-G4-Sdy" secondAttribute="top" id="nAj-F4-rh7"/>
+                                    <constraint firstAttribute="bottom" secondItem="zau-48-zfc" secondAttribute="bottom" id="rYJ-06-haG"/>
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-IG-QiJ">
@@ -73,6 +76,7 @@
                     </view>
                     <connections>
                         <outlet property="_mapView" destination="Qzm-IG-QiJ" id="7Am-kz-G1H"/>
+                        <outlet property="temperaturaLabel" destination="zau-48-zfc" id="poD-Mk-GWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
